@@ -74,11 +74,11 @@ with st.sidebar:
     
 ############# PAGE START ##################
 
-st.header('Welcome 👋')
+st.header('Welcome, my name is Edward 👋.')
 st.write("""
-         My name is Edward and I'm a business oriented data scientist. I love to write, code, and think.
+         I'm a business oriented data scientist. I love to write, code, and analyze.
 
-         I have a passion for business and will help your business make more money. 
+         I have a passion for everything business and technology, and will help your organization meet its goals through advanced analytics.   
          """)
 
 
@@ -89,53 +89,81 @@ with col1:
     st.image(f'{ASSETS_DIR}/headshot.png',caption='Me in Los Angeles, CA')
 
 with col2:
-    st.write('Highlights')
+    st.subheader('Highlights of my Writing')
     
-    faq = {
-    "Question 1": 'asdf',
-    "Question 2": 'asdf',
-    "Question 3": 'asdfasdf'
+    highlights = {
+    "Increasing Revenue at Universal Studios Hollywood": 'https://medium.com/@edward.ang14/improving-universal-studios-hollywood-revenue-streams-a023a4a15fa7',
+    "Is an Equinox Gym Membership worth the cash? If so, are they leaving money on the table?": 'https://medium.com/@edward.ang14/is-an-equinox-gym-membership-worth-the-cash-if-so-are-they-leaving-money-on-the-table-a8eb7fb09cdc'
 }
-    for question, Answer in faq.items():
-        with st.expander(question):
-            st.write(Answer)
+    for title, link in highlights.items():
+        with st.expander(title):
+            st.write(link)
             
-
-
-
-
-
-
 
 tab1, tab2, tab3 = st.tabs(['About Me', 'Resume','More Information'])
 with tab1:
+    st.subheader('2014 - 2018')
+
+    col1, col2 = st.columns((5,2))
+
+
+    with col1:
+        st.write("""
+    I did my undergrad at Carnegie Mellon University in Pittsburgh, PA, and graduated with a B.S. in Statistics and Machine Learning and a minor in Business Administration. 
+
+    Although I learned a lot, most of the school work was too theoretical for my liking. I wanted to work on things that were more practical and applicable in the real world. 
+
+    I completed two data science internships while in school. One was at an e-commerce startup and one was at Goodyear Tire and Rubber company. 
+                
+    I learned the importance of good communication especially when working on an analytics team through those internships. 
+                
+    Your insights are only valuable if you get key decision makers to buy into your vision. That motivated me to dedicate a significant amount of time towards perfecting my communication and social skills. 
+                """)
+        
+    with col2:
+        for i in range(5):
+            st.write("")
+        st.image(f'{ASSETS_DIR}/CMU_logo.png', width=180)
+    
+    st.write("")
+    st.write("---")
+
+    st.header('2018-2023')
+
+    col1, col2 = st.columns((2,5))
+    with col1:
+        for i in range(9):
+            st.write("")
+        st.image(f'{ASSETS_DIR}/ibm_logo.png', width=180)
+
+    with col2:
+        st.write("""
+    I started my full time career at IBM in their advanced analytics consulting sector. 
+                
+    I chose consulting because I wanted exposure to a wide variety of projects and teams, to travel around the world, and to sharpen my communication skills. IBM is known for their leadership in technical consulting, which is another reason why I chose to work there. 
+                
+    As expected, I worked on many different projects at IBM including inventory optimization, energy consumption forecasting, OCR software development, and sentiment analysis just to name a few. 
+                 
+    I've worn many hats such as being a data scientist, data engineer, MLOps engineer, project manager, solution architect, and account executive - each for months at a time. 
+                
+    I worked my way from an entry level consultant to a manager.
+            """)
+
+
+    st.write("")
+    st.write("---")
+
+    st.subheader('2023-Present')
     st.write("""
-Hello, my name is Edward. Thanks for visiting my website. 
-        
-I am a business oriented data scientist that specializes in optimizing business operations through insights derived from advanced analytics. 
-        
-I did my undergrad at Carnegie Mellon Universtiy and graduated with a B.S. in Statistics and Machine Learning in 2018.
-        
-I have 5 years of experience working in the technical consulting industry at IBM.
-        
-I am passionate about people as well. What good are insights if you aren't able to communicate the value to the people whom it will benefit. 
-        
-Eclectic interests. Tennis, nutrition, Poker, game theory, social psychology, sociology, etc. I'm a great conversationalist and love to connect with people. I write on Medium and Quora to convey my ideas and let the world know what I'm up to. 
-        
-I've done music production. Affiliate marketing. 
-        
-I love to read. My favorite books are the Power of Now by Eckhart Tolle. Also business books. Pricing. Lean Startup. 
-
-I do sales and marketing too.
-        
-I want to be part of a fast growing startup. Scrappy and no rules. Wear many hats. Want to be part of something where my unique opinions and contributions matter, and can actually see the results. 
-
-""")
+    I would like to shift my focus and become more specialized. I'm interested in price optimization and experimental design at any company that does business online. 
+             
+    Contact me for more information.
+        """)
 
 with tab2:
     displayPDF(f'{ASSETS_DIR}/EdwardAng_Resume_2023.pdf')
 
 
 with tab3:
-    st.write('tab3')
+    st.write('Section in progress 🛠️')
 
